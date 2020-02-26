@@ -2,9 +2,11 @@
 The Odin Project - Web 101 Project: Rock Paper Scissors
 
 Introduction
+
 We’re going to make a simple implementation of grade-school classic “rock paper scissors”. If you don’t know what that is check the wikipedia article or this ridiculous step-by-step. For the moment we’re just going to play the game from the browser console, but we will revisit it and add a front end later so don’t forget to keep the code on GitHub! You might notice some ‘view in browser’ links in the student solutions - this is coming in a later lesson. When you get there don’t forget to come back and add your link!
 
 Assignment
+
 1. Start a new git repo for your project.
 2. Create a blank HTML document with a script tag. This game is going to be played completely from the console, so don’t worry about putting anything else in there.
 3. Your game is going to play against the computer, so begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play.
