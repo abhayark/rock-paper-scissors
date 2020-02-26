@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+  <h1>Let's Play Rock Paper Scissors!</h1>
+  <script>
+    function computerPlay() {
+      let n = Math.floor(Math.random());
+      let choiceArr = ["rock", "paper", "scissors"]
+      let index = n % 3;
+      return choiceArr[index];
+    }
+
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection === computerSelection) {
+        alert("It's a tie!");
+        return 'tie';
+      }
+
+      if (playerSelection === 'rock') {
+        if (computerSelection === 'paper') {
+          console.log("You Lose! Paper beats Rock");
+          return 'lose';
+        } else if (computerSelection === 'scissors') {
+          console.log("You Win! Rock beats Scissors");
+          return 'win';
+        }
+
+      } else if (playerSelection === 'paper') {
+        if (computerSelection === 'rock') {
+          console.log("You Win! Paper beats Rock");
+          return 'win';
+        } else if (computerSelection === 'scissors') {
+          console.log("You Lose! Scissors beats Paper");
+          return 'lose';
+        }
+
+      } else if (playerSelection === 'scissors') {
+        if (computerSelection === 'rock') {
+          console.log("You Lose! Rock beats Scissors");
+          return 'lose';
+        } else if (computerSelection === 'paper') {
+          console.log("You Win! Scissors beats Paper");
+          return 'win';
+        }
+      }
+    }
+    function game() {
+      let playerScore = 0; computerScore = 0;
+      for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Rock, Paper, or Scissors? ").toLowerCase();
+        const computerSelection = computerPlay();
+        let roundResult = playRound(playerSelection, computerSelection);
+        if (roundResult == 'win') {
+          playerScore++;
+        } else if (roundResult == 'lose') {
+          computerScore++;
+        } else {
+          continue;
+        }
+      }
+      if (playerScore > computerScore) {
+        alert ("You've won the game!")
+      } else if (playerScore < computerScore) {
+        alert("You've lost the game!")
+      } 
+    }
+    game();
+  </script>
+</body>
+</html>
