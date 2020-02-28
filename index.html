@@ -3,73 +3,54 @@
 <head>
   <title>Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla|Varela+Round&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/be013988f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <h1>Let's Play Rock Paper Scissors!</h1>
-  <script>
-    function computerPlay() {
-      let n = Math.floor(Math.random());
-      let choiceArr = ["rock", "paper", "scissors"]
-      let index = n % 3;
-      return choiceArr[index];
-    }
+  <div id="container"> 
+    <h1>Let's Play Rock Paper Scissors!</h1>
+    <p>The first to reach 5 points will be the winner.</p>
+    <div id="buttons">
+      <button id="rock" class="btn-weapon">
+        <i class="far fa-hand-rock"></i><br/>
+        <span>ROCK</span>
+      </button>
+      <button id="paper" class="btn-weapon">
+        <i class="far fa-hand-paper"></i><br/>
+        <span>PAPER</span>
+      </button>
+      <button id="scissors" class="btn-weapon">
+        <i class="far fa-hand-scissors"></i><br/>
+        <span>SCISSORS</span>
+      </button>
+    </div>
+    <hr/>
+    <div id="scores">
+      <h2>SCOREBOARD</h2>
+      <table>
+        <tr>
+          <th>YOU</th>
+          <th>COMPUTER</th>
+        </tr>
+        <tr>
+          <td id="pScore">0</td>
+          <td id="cScore">0</td>
+        </tr>
+        <tr>
+          <td id="pChoice">-</td>
+          <td id="cChoice">-</td>
+        </tr>
+      </table>
+    </div>
+    <hr/>
+    <div id="results">
+      <br/>
+      <div id="eachRoundResult"></div><br/>
+    </div>
+  </div>
 
-    function playRound(playerSelection, computerSelection) {
-      if (playerSelection === computerSelection) {
-        alert("It's a tie!");
-        return 'tie';
-      }
-
-      if (playerSelection === 'rock') {
-        if (computerSelection === 'paper') {
-          console.log("You Lose! Paper beats Rock");
-          return 'lose';
-        } else if (computerSelection === 'scissors') {
-          console.log("You Win! Rock beats Scissors");
-          return 'win';
-        }
-
-      } else if (playerSelection === 'paper') {
-        if (computerSelection === 'rock') {
-          console.log("You Win! Paper beats Rock");
-          return 'win';
-        } else if (computerSelection === 'scissors') {
-          console.log("You Lose! Scissors beats Paper");
-          return 'lose';
-        }
-
-      } else if (playerSelection === 'scissors') {
-        if (computerSelection === 'rock') {
-          console.log("You Lose! Rock beats Scissors");
-          return 'lose';
-        } else if (computerSelection === 'paper') {
-          console.log("You Win! Scissors beats Paper");
-          return 'win';
-        }
-      }
-    }
-    function game() {
-      let playerScore = 0; computerScore = 0;
-      for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Rock, Paper, or Scissors? ").toLowerCase();
-        const computerSelection = computerPlay();
-        let roundResult = playRound(playerSelection, computerSelection);
-        if (roundResult == 'win') {
-          playerScore++;
-        } else if (roundResult == 'lose') {
-          computerScore++;
-        } else {
-          continue;
-        }
-      }
-      if (playerScore > computerScore) {
-        alert ("You've won the game!")
-      } else if (playerScore < computerScore) {
-        alert("You've lost the game!")
-      } 
-    }
-    game();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
