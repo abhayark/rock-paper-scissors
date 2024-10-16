@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rock Paper Scissors</title>
-  <meta charset="UTF-8"/>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Karla|Varela+Round&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/be013988f9.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla|Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/be013988f9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-  <div id="container"> 
-    <h1>Let's Play Rock Paper Scissors!</h1>
-    <p>The first to reach 5 points will be the winner.</p>
-    <div id="buttons">
-      <button id="rock" class="btn-weapon">
-        <i class="far fa-hand-rock"></i><br/>
-        <span>ROCK</span>
-      </button>
-      <button id="paper" class="btn-weapon">
-        <i class="far fa-hand-paper"></i><br/>
-        <span>PAPER</span>
-      </button>
-      <button id="scissors" class="btn-weapon">
-        <i class="far fa-hand-scissors"></i><br/>
-        <span>SCISSORS</span>
-      </button>
+  <body>
+    <div id="container">
+      <h1>Rock Paper Scissors</h1>
+      <p>The first to reach 5 points will be the winner.</p>
+      <div id="buttons">
+        <button id="rock" class="weapon">
+          <i class="far fa-hand-rock"></i><br />
+          <span>ROCK</span>
+        </button>
+        <button id="paper" class="weapon">
+          <i class="far fa-hand-paper"></i><br />
+          <span>PAPER</span>
+        </button>
+        <button id="scissors" class="weapon">
+          <i class="far fa-hand-scissors"></i><br />
+          <span>SCISSORS</span>
+        </button>
+      </div>
+      <hr />
+      <div id="scores">
+        <h2>SCOREBOARD</h2>
+        <table>
+          <tr>
+            <th>YOU</th>
+            <th>COMPUTER</th>
+          </tr>
+          <tr>
+            <td id="pScore">0</td>
+            <td id="cScore">0</td>
+          </tr>
+          <tr>
+            <td id="pChoice">-</td>
+            <td id="cChoice">-</td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div id="results">
+        <br />
+        <div id="RoundResult"></div>
+        <br />
+      </div>
     </div>
-    <hr/>
-    <div id="scores">
-      <h2>SCOREBOARD</h2>
-      <table>
-        <tr>
-          <th>YOU</th>
-          <th>COMPUTER</th>
-        </tr>
-        <tr>
-          <td id="pScore">0</td>
-          <td id="cScore">0</td>
-        </tr>
-        <tr>
-          <td id="pChoice">-</td>
-          <td id="cChoice">-</td>
-        </tr>
-      </table>
-    </div>
-    <hr/>
-    <div id="results">
-      <br/>
-      <div id="eachRoundResult"></div><br/>
-    </div>
-  </div>
 
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>

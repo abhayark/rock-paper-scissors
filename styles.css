@@ -1,18 +1,20 @@
 html {
   font-size: 18px;
-  background:  #b23a48;
+  background: #b23a48;
   background-size: cover;
 }
 
-p, #eachRoundResult {
-  color: white;
-  font-family: 'Karla', sans-serif;
+p,
+#RoundResult {
+  color: #ffffffc4;
+  font-family: "Karla", sans-serif;
 }
 
-body,html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   color: #fed0bb;
 }
 
@@ -33,7 +35,7 @@ body,html {
 button {
   margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   width: 10rem;
   text-align: center;
   cursor: pointer;
@@ -41,12 +43,14 @@ button {
   background-color: #461220;
   color: #fed0bb;
   border: 5px solid #461220;
-  outline: none;  
+  outline: none;
+  transition: margin 0.3s ease-in-out;
 }
 
 button:hover {
+  margin-top: -1px;
   border: 5px solid #fed0bb;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   color: #461220;
   background-color: #fed0bb;
 }
@@ -59,7 +63,7 @@ button i {
 span {
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: #b23a48;
 }
 
@@ -84,4 +88,3 @@ th {
 td {
   font-size: 15px;
 }
-
